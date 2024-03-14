@@ -82,16 +82,18 @@ class Algorithms:
                     swaped = True
         return vector
     
+
+    # Some function of x that land's on y as (3x² + 30x + 5):
     def f(self, x):
         return (3*(x**2)) + (30*x) + 5
     
+    # Both graphs from f and f' are plotted in 1-image.png the images fol
+    # The function above derivative ^v (6x + 30)
     def f_linha(self, x):
         return 6*x + 30
 
     # Gradient-based Optimization, using only 2 dimension (improve required)
-    def gradientAscent(self, x):
-        threshold = 0.0001
-        alpha = 0.01
+    def gradientAscent(self, x, alpha, threshold):
         old_x = x
         run = True
         while run:
@@ -116,7 +118,7 @@ def main() -> int:
     vector1 = program.misc.sortedVector(10, [2,15])
     print(vector1)
 
-    slopeTopX = program.algs.gradientAscent(1)
+    slopeTopX = program.algs.gradientAscent(1, 0.01, 0.001)
     slopeTopY = program.algs.f(slopeTopX)
     print(slopeTopX, slopeTopY)
 
